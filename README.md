@@ -6,9 +6,7 @@
 
 **[▶ オンラインデモを試す](https://Tomoiura.github.io/transformer-emulator/)** — インストール不要でブラウザから体験できます
 
-<!-- スクリーンショットを追加したら以下のコメントを解除:
 ![screenshot](docs/screenshot.png)
--->
 
 ## 概要
 
