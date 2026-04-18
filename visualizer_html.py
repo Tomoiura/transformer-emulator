@@ -404,6 +404,24 @@ def page_intro(title, training_data, queries, n_layers, d_model, n_heads, d_ff,
     <p class="subtitle">大規模言語モデル (LLM) の内部動作を<br>
     「学習」から「推論」まで、ステップごとに可視化するツール</p>
 
+    <!-- ===== 外部リンク ===== -->
+    <div class="intro-links">
+        <a class="intro-link intro-link-github" href="https://github.com/Tomoiura/transformer-emulator" target="_blank" rel="noopener">
+            <span class="intro-link-icon">🐙</span>
+            <span class="intro-link-body">
+                <span class="intro-link-title">GitHub リポジトリ</span>
+                <span class="intro-link-desc">ソースコード・インストール方法・ライセンス</span>
+            </span>
+        </a>
+        <a class="intro-link intro-link-qiita" href="https://qiita.com/Tomoiura/items/3d8205d0c786cd840cf0" target="_blank" rel="noopener">
+            <span class="intro-link-icon">📝</span>
+            <span class="intro-link-body">
+                <span class="intro-link-title">Qiita 記事</span>
+                <span class="intro-link-desc">制作の経緯と学んだこと・技術的な解説</span>
+            </span>
+        </a>
+    </div>
+
     <!-- ===== このプログラムは何？ ===== -->
     <h3>🔍 このプログラムは何？</h3>
     <div class="desc">
@@ -1934,6 +1952,36 @@ body {{
     border-bottom: 3px solid var(--primary);
 }}
 .subtitle {{ color: #666; margin-bottom: 1.5em; }}
+.intro-links {{
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    margin: 1em 0 1.8em;
+}}
+.intro-link {{
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 18px; border-radius: 10px;
+    text-decoration: none; border: 2px solid transparent;
+    transition: all 0.15s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}}
+.intro-link:hover {{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}}
+.intro-link-github {{
+    background: #24292e; color: #fff; border-color: #24292e;
+}}
+.intro-link-github:hover {{ background: #1a1e22; }}
+.intro-link-qiita {{
+    background: #fff; color: #55c500; border-color: #55c500;
+}}
+.intro-link-qiita:hover {{ background: #f0fdf4; }}
+.intro-link-icon {{ font-size: 2em; flex-shrink: 0; }}
+.intro-link-body {{ display: flex; flex-direction: column; gap: 2px; }}
+.intro-link-title {{ font-weight: bold; font-size: 1.05em; }}
+.intro-link-desc {{ font-size: 0.82em; opacity: 0.85; }}
+@media (max-width: 700px) {{
+    .intro-links {{ grid-template-columns: 1fr; }}
+}}
 .desc {{
     background: #F5F5F5; border-left: 4px solid var(--primary);
     padding: 1em 1.2em; margin-bottom: 1.5em; border-radius: 0 8px 8px 0;
